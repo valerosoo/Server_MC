@@ -12,7 +12,7 @@
 
     <script>
         document.getElementById('startButton').addEventListener('click', function() {
-            fetch('http://192.168.1.7:5000/start-server', {
+            fetch('https://20b6-181-99-36-126.ngrok-free.app/start-server', {
                 method: 'POST'
             })
             .then(response => response.text())
@@ -21,7 +21,7 @@
         });
 
         document.getElementById('stopButton').addEventListener('click', function() {
-            fetch('http://192.168.1.7:5000/stop-server', {
+            fetch('https://20b6-181-99-36-126.ngrok-free.app/stop-server', {
                 method: 'POST'
             })
             .then(response => response.text())
