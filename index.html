@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control del Servidor Minecraft</title>
+    <style>
+        html {
+            background-image: url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/05/mejores-shaders-minecraft-2694653.jpg?tf=3840x");
+            width: 100vw;
+            height: 100vh;
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        
+        .div_todo {
+            background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+            backdrop-filter: blur(2px); /* Efecto de desenfoque */
+            border: 5px solid rgb(57, 223, 6); /* Borde negro */
+            border-radius: 15px; /* Bordes redondeados */
+            padding: 20px; /* Espacio interno */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute; /* Posicionamiento absoluto */
+            top: 50%; /* Centra verticalmente */
+            left: 50%; /* Centra horizontalmente */
+            transform: translate(-50%, -50%); /* Ajuste para centrar el div */
+            color: #FFF; /* Color del texto */
+        }
+        
+        h1 {
+            font-family: 'Minecraft', sans-serif; /* Fuente personalizada para el título */
+            font-size: 36px; /* Tamaño de la fuente */
+            text-align: center;
+            margin: 10px 0; /* Margen superior e inferior */
+        }
+
+        button {
+            background-image: url("https://cdn.pixabay.com/photo/2020/12/10/12/10/minecraft-5820118_960_720.png");
+            background-size: cover; /* Ajusta la imagen al tamaño del botón */
+            background-repeat: no-repeat; /* No repetir la imagen */
+            border: none; /* Sin borde */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            text-align: center; /* Alineación del texto */
+            text-decoration: none; /* Sin subrayado */
+            display: inline-block; /* Mostrar como bloque en línea */
+            font-size: 16px; /* Tamaño de la fuente */
+            margin: 10px; /* Margen */
+            cursor: pointer; /* Cambia el cursor al pasar */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Transición para el color de fondo */
+            width: 200px; /* Ancho fijo para el botón */
+            height: 60px; /* Altura fija para el botón */
+            position: relative; /* Posicionamiento relativo para el texto */
+            overflow: hidden; /* Oculta el desbordamiento */
+        }
+
+        button:hover {
+            background-color: rgba(76, 175, 80, 0.7); /* Color de fondo al pasar el mouse */
+        }
+
+        button span {
+            position: relative; /* Posición relativa para el texto */
+            z-index: 1; /* Asegura que el texto esté encima de la imagen */
+        }
+    </style>
 </head>
 <body>
-    <h1>Control del Servidor de Minecraft</h1>
-    <button id="startButton">Iniciar Servidor</button>
-    <button id="stopButton">Apagar Servidor</button>
+    <div class="div_todo">
+        <h1>Control del Servidor de Minecraft</h1>
+        <button id="startButton"><span>Iniciar Servidor</span></button>
+        <button id="stopButton"><span>Apagar Servidor</span></button>
+    </div>
 
     <script>
         document.getElementById('startButton').addEventListener('click', function() {
