@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control del Servidor Minecraft</title>
+</head>
+<body>
+    <h1>Control del Servidor de Minecraft</h1>
+    <button id="startButton">Iniciar Servidor</button>
+    <button id="stopButton">Apagar Servidor</button>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', function() {
+            fetch('http://192.168.1.7:5000/start-server', {
+                method: 'POST'
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+        });
+
+        document.getElementById('stopButton').addEventListener('click', function() {
+            fetch('http://192.168.1.7:5000/stop-server', {
+                method: 'POST'
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
